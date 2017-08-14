@@ -30,20 +30,20 @@ Your browser does not support the HTML5 canvas tag.</canvas>
     ctx.stroke();
   }
   
-  function drawCircle(ctx) {
+  function drawCircle(ctx, x, y) {
       ctx.beginPath();
-      ctx.arc(50, 50, 40, 0, 2 * Math.PI);
+      ctx.arc(x + 50, y + 50, 40, 0, 2 * Math.PI);
       ctx.strokeStyle="#0000FF"; // Blue.
       ctx.lineWidth = 10;
       ctx.stroke();
   }
   
-  function drawCross(ctx) {
+  function drawCross(ctx, x, y) {
       ctx.beginPath();
-      ctx.moveTo(15,15);
-      ctx.lineTo(85,85);
-      ctx.moveTo(85,15);
-      ctx.lineTo(15,85);
+      ctx.moveTo(x + 15, y + 15);
+      ctx.lineTo(x + 85, y + 85);
+      ctx.moveTo(x + 85, y + 15);
+      ctx.lineTo(x + 15, y + 85);
       ctx.strokeStyle="#00FF00"; // Green.
       ctx.lineWidth = 10;
       ctx.stroke();
@@ -52,8 +52,9 @@ Your browser does not support the HTML5 canvas tag.</canvas>
   var c = document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
   drawBoard(ctx);
-  drawCircle(ctx);
-  drawCross(ctx);
+  drawCircle(ctx, 0, 0);
+  drawCross(ctx, 0, 200);
+  drawCross(cts, 0, 100);
 </script> 
 
 </body>
