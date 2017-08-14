@@ -32,7 +32,9 @@ Your browser does not support the HTML5 canvas tag.</canvas>
   
   function drawCircle(ctx) {
       ctx.beginPath();
-      ctx.arc(50, 50, 50, 0, 2 * Math.PI);
+      ctx.strokeStyle="#0000FF"; // Blue.
+      ctx.lineWidth = 10;
+      ctx.arc(50, 50, 40, 0, 2 * Math.PI);
       ctx.stroke();
   }
   
