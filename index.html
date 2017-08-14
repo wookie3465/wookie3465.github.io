@@ -11,9 +11,10 @@
 Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
+  
+  // The following draws the tic-tac-toe board.
   function drawBoard(ctx) {
       ctx.beginPath();
-    //ctx.arc(100, 75, 50, 0, 2 * Math.PI);
   
     ctx.moveTo(100,0);
     ctx.lineTo(100,300);
@@ -30,7 +31,9 @@ Your browser does not support the HTML5 canvas tag.</canvas>
   }
   
   function drawCircle(ctx) {
-    // ....
+      ctx.beginPath();
+      ctx.arc(50, 50, 50, 0, 2 * Math.PI);
+      ctx.stroke();
   }
   
   function drawCross(ctx) {
@@ -40,6 +43,7 @@ Your browser does not support the HTML5 canvas tag.</canvas>
   var c = document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
   drawBoard(ctx);
+  drawCircle(ctx);
 </script> 
 
 </body>
