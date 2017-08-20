@@ -48,10 +48,10 @@ Your browser does not support the HTML5 canvas tag.</canvas>
   }
   function drawTriangle(ctx, x, y) {
   ctx.beginPath();
-  ctx.moveTo(x+15,y+15);
-    ctx.lineTo(x+50,y+50);
-    ctx.lineTo (x+85,y+15);
-    ctx.lineTo(x+15,y+15);
+  ctx.moveTo(x+15,y+85);
+    ctx.lineTo(x+50,y+15);
+    ctx.lineTo (x+85,y+85);
+    ctx.lineTo(x+15,y+85);
     ctx.stroke();
   }
   var c = document.getElementById("myCanvas");
