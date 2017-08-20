@@ -46,13 +46,21 @@ Your browser does not support the HTML5 canvas tag.</canvas>
       ctx.lineWidth = 10;
       ctx.stroke();
   }
-  
+  function drawTriangle(ctx, x, y) {
+  ctx.beginPath();
+  ctx.moveTo(x+15,y+15);
+    ctx.lineTo(x+50,y+50);
+    ctx.lineTo (x+85,y+15);
+    ctx.lineTo(x+85,y+15);
+    ctx.stroke();
+  }
   var c = document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
   drawBoard(ctx);
   drawCircle(ctx, 0, 0);
   drawCross(ctx, 200, 0);
   drawCross(ctx, 0, 100);
+  drawTriangle(ctx, 200,100);
 </script> 
 
 </body>
